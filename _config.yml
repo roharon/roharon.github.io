@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   html résumé making machine from @nternetinspired. Because web developers shouldn't
   showcase their skills on bits of dead tree.
 baseurl: "/jekyll-resume/" # the subpath of your site, e.g. /blog/
-url: "http://nternetinspired.github.io" # the base hostname & protocol for your site
+url: "http://alexphelps.github.io" # the base hostname & protocol for your site
 
 # Compress html
 compress_html:
