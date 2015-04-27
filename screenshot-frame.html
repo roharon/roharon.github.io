@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8" />
+<title>Frame Shots</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta content="" name="description" />
+<meta content="" name="author" />
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<style type="text/css">
+body {
+  margin:0px;
+  overflow: hidden;
+}
+.spaceWrap { 
+  width: 400px; 
+  height: 225px; 
+  padding: 0; 
+  overflow: hidden; 
+}
+.spaceWrap iframe {
+  pointer-events: none;
+}
+
+.viewPort { 
+  width: 1400px; 
+  height: 900px; 
+  border: 1px solid white;
+}
+
+.viewPort {
+    -webkit-transform: scale(0.25);
+    -webkit-transform-origin: 0 0;
+}
+.frame-click {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+</style>
+<style type="text/css">
+#loader {
+  position: absolute;
+  padding: 80px 120px;
+  width: 400px;
+  height: 225px;
+  z-index: 999;
+  background-color: rgba(255,255,255, 0.6);
+}
+.loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: .9em;
+    height: .9em;
+    margin: .2em;
+    opacity: 0;
+    z-index: 9999;
+    background: #0aa699;
+    border-radius: .9em;
+    animation: loading .5s infinite alternate;
+    -webkit-animation: loading .5s infinite alternate;
+    -moz-animation: loading .5s infinite alternate;
+}
+.loading span:nth-of-type(2) {
+    background: #0090d9;
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+}
+.loading span:nth-of-type(3) {
+    background: #FBB05E;
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+}
+.loading span:nth-of-type(4) {
+    background: #1f3853;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+}
+.loading span:nth-of-type(5) {
+    background: #f35958;
+    animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+}
+.loading span:nth-of-type(6) {
+    background: #8e44ad;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+}
+@-webkit-keyframes loading {
+    0% {opacity: 0.0;}
+    50% { opacity: 0.8; }
+    100% {opacity: 1;}
+}
+@-moz-keyframes loading {
+    0% {opacity: 0.0;}
+    50% { opacity: 0.8; }
+    100% {opacity: 1;}
+}
+@keyframes loading {
+    0% {opacity: 0.0;}
+    50% { opacity: 0.8; }
+    100% {opacity: 1;}
+}
+</style>
+</head>
+<body class="">
+  <div class"spaceWrap">
+  <div id="loader">
+    <div class="loading">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <a id="frameLink" href="" target="_blank" class="frame-click"></a>
+  <iframe class="viewPort" id="screenshotframe" src="" frameborder=0 scrolling="no"></iframe>
+  </div>
+<script>
+(function() {
+  var frameBaseSRC = document.getElementById("screenshotframe").src;
+  var frameQueryString = document.location.href.split("url=")[1];
+   if (frameQueryString != undefined) {
+    document.getElementById("screenshotframe").src = frameQueryString;
+    document.getElementById("frameLink").href = frameQueryString;
+   }
+})();
+</script>
+<script>
+    $(document).ready(function () {
+        $('screenshotframe').hide();
+        $('#screenshotframe').on('load', function () {
+            $('#loader').hide();
+            $('screenshotframe').show();
+        });
+    });
+</script>
+</body>
+</html>
