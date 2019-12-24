@@ -2,23 +2,23 @@
 title: Resume of Alex Phelps
 author:
   address:
-      street: 1735 Sanctuary Dr.
-      town: Owensboro Kentucky
-      postcode: 42303
-      country: United States
-  email: alex@alexphelps.me
-  name: Alex Phelps
-  title: Experienced Product Owner
+      street: 
+      town: 
+      postcode: 
+      country: South Korea
+  email: roharon@studentpartner.com
+  name: Aron Roh
+  title: Aron Roh's Resume
   twitter_username:
-  facebook_username: phelps.alex
-  github_username:  alexphelps
-  linkedin_username: alexphelps
-  phone: 270-315-2766
-  repository: https://github.com/alexphelps/resume
-  website: https://resume.alexphelps.me
-description: The resume of Alex Phelps
-baseurl: "/" # the subpath of your site, e.g. /blog/
-url: "http://alexphelps.github.io" # the base hostname & protocol for your site
+  facebook_username: roharon
+  github_username:  roharon
+  linkedin_username: 노아론11
+  phone: o1o-2665-8733
+  repository: https://github.com/roharon
+  website: https://roharon.github.io/resume
+description: The resume of Aron Roh
+baseurl: "/resume"
+url: "http://roharon.github.io" # the base hostname & protocol for your site
 
 # Compress html
 compress_html:
